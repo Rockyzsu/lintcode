@@ -10,7 +10,28 @@ def anagram(s,t):
             return False
     return True
 '''
-a='abc'
+a='abcc'
 b='cba'
 c='aaa'
-print anagram(a,c)
+
+def anagram(s,t):
+    s=list(s)
+    t=list(t)
+    print s
+    print t
+    #x= s.pop()
+    if len(s)!=len(t):
+        return False
+    while s :
+
+        x=s.pop()
+        if x in t:
+            t.remove(x)
+
+        if len(s)==0 and len(t)==0:
+            return True
+
+
+    return False
+
+print anagram(a,b)
