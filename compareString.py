@@ -14,4 +14,21 @@ __author__ = 'xda'
 给出 A = "ABCD" B = "AABC"， 返回 false
 '''
 def compareString(A,B):
-    pass
+    if 0==len(A):
+        return True
+
+    if len(A)!=0 and len(B)==0:
+        return False
+
+
+    for i in A:
+        if i not in B:
+            return False
+
+    return True
+
+A="A"
+B=""
+
+
+print compareString(A,B)
